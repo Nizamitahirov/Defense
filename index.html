@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <title>Beyond Sales — Master's Thesis Defense</title>
@@ -35,1318 +35,16 @@
 "In conclusion, our research and proposed solution offer several key strategic takeaways for Bravo. First, we've established that sales performance alone is a poor proxy for managerial quality; a multifactorial approach is essential. Second, the MPI helps identify and reward consistent operational health, capturing the invisible financial leaks across the store network. This framework represents a strategic shift for Bravo, moving from a sales-only culture to one that values operational excellence. Ultimately, the MPI eliminates structural bias, ensuring fairness and motivation for all managers, and aligning their actions with Bravo's long-term financial health. This isn't just about fairness; it's about building a more sustainable and customer-centric retail operation."
 ]
 </script>
-<style>
-  :root {
-    --bg: #F2EFE8;
-    --bg-warm: #ECE7DC;
-    --ink: #14192B;
-    --ink-soft: #2C3247;
-    --muted: #6E6A5F;
-    --rule: #C8C2B2;
-    --rule-soft: #D9D4C5;
-    --paper: #FAF8F2;
-    --accent: #8A1F2B;
-    --accent-soft: #B8636B;
-    --ochre: #A87E2C;
-
-    --type-display: 96px;
-    --type-title: 64px;
-    --type-subtitle: 44px;
-    --type-body: 30px;
-    --type-small: 24px;
-    --type-eyebrow: 24px;
-    --type-data: 56px;
-
-    --pad-top: 96px;
-    --pad-bottom: 88px;
-    --pad-x: 110px;
-    --gap-title: 52px;
-    --gap-item: 28px;
-
-    --serif: 'Newsreader', 'Source Serif Pro', Georgia, serif;
-    --sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --mono: 'JetBrains Mono', 'SF Mono', monospace;
-  }
-
-  html, body { margin: 0; padding: 0; background: #0a0a0a; }
-  body { font-family: var(--sans); color: var(--ink); }
-
-  deck-stage { background: #0a0a0a; }
-
-  /* Slide base */
-  .slide {
-    box-sizing: border-box;
-    background: var(--bg);
-    color: var(--ink);
-    padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slide.dark {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .slide.paper { background: var(--paper); }
-  .slide.warm { background: var(--bg-warm); }
-
-  /* Chrome elements */
-  .chrome-top {
-    position: absolute;
-    top: 44px; left: var(--pad-x); right: var(--pad-x);
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--sans);
-    font-size: var(--type-eyebrow);
-    color: var(--muted);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .slide.dark .chrome-top { color: rgba(250,248,242,0.55); }
-  .chrome-top .right { font-feature-settings: 'tnum'; }
-
-  .chrome-bottom {
-    position: absolute;
-    bottom: 44px; left: var(--pad-x); right: var(--pad-x);
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--sans);
-    font-size: var(--type-eyebrow);
-    color: var(--muted);
-    letter-spacing: 0.14em;
-    font-weight: 500;
-  }
-  .slide.dark .chrome-bottom { color: rgba(250,248,242,0.5); }
-
-  .eyebrow {
-    font-family: var(--sans);
-    font-size: var(--type-eyebrow);
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
-    margin: 0 0 28px;
-  }
-  .slide.dark .eyebrow { color: var(--accent-soft); }
-
-  h1.title, h2.title {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: var(--type-title);
-    line-height: 1.05;
-    letter-spacing: -0.015em;
-    margin: 0;
-    color: var(--ink);
-    text-wrap: balance;
-  }
-  .slide.dark h1.title, .slide.dark h2.title { color: var(--paper); }
-
-  .title em { font-style: italic; color: var(--accent); }
-  .slide.dark .title em { color: var(--accent-soft); }
-
-  .subtitle {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: var(--type-subtitle);
-    line-height: 1.2;
-    color: var(--ink-soft);
-    margin: 36px 0 0;
-    max-width: 1400px;
-    text-wrap: balance;
-  }
-  .slide.dark .subtitle { color: rgba(250,248,242,0.75); }
-
-  .body-text {
-    font-family: var(--sans);
-    font-size: var(--type-body);
-    line-height: 1.45;
-    color: var(--ink-soft);
-    font-weight: 400;
-    max-width: 1400px;
-  }
-  .slide.dark .body-text { color: rgba(250,248,242,0.85); }
-
-  .small-text {
-    font-family: var(--sans);
-    font-size: var(--type-small);
-    line-height: 1.5;
-    color: var(--muted);
-  }
-
-  .mono {
-    font-family: var(--mono);
-    font-feature-settings: 'tnum';
-  }
-
-  hr.rule {
-    border: 0;
-    height: 1px;
-    background: var(--rule);
-    margin: 0;
-  }
-  .slide.dark hr.rule { background: rgba(250,248,242,0.18); }
-
-  /* Title slide */
-  .title-slide {
-    padding: var(--pad-top) var(--pad-x);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
-  .title-slide .top-mark {
-    display: flex; align-items: baseline; gap: 28px;
-    font-family: var(--sans);
-    font-size: 24px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
-  }
-  .title-slide .top-mark .seal {
-    width: 14px; height: 14px;
-    background: var(--accent);
-    transform: rotate(45deg);
-  }
-  .title-slide .top-mark .school {
-    color: var(--muted);
-    font-size: 24px;
-  }
-  .title-slide .center {
-    display: flex; flex-direction: column; justify-content: center;
-    gap: 36px;
-    padding-right: 200px;
-  }
-  .title-slide .display {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: var(--type-display);
-    line-height: 0.98;
-    letter-spacing: -0.025em;
-    color: var(--ink);
-    text-wrap: balance;
-    margin: 0;
-  }
-  .title-slide .display em { font-style: italic; color: var(--accent); font-weight: 400; }
-  .title-slide .lede {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: 38px;
-    line-height: 1.3;
-    color: var(--ink-soft);
-    max-width: 1100px;
-    margin: 0;
-  }
-  .title-slide .bottom-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 48px;
-    padding-top: 36px;
-    border-top: 1px solid var(--rule);
-  }
-  .title-slide .bottom-row .label {
-    font-family: var(--sans);
-    font-size: 24px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  .title-slide .bottom-row .value {
-    font-family: var(--serif);
-    font-size: 28px;
-    color: var(--ink);
-    line-height: 1.25;
-    font-weight: 400;
-  }
-
-  /* Agenda */
-  .agenda-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 90px;
-    row-gap: 0;
-    margin-top: 64px;
-    flex: 1;
-  }
-  .agenda-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    padding: 36px 0;
-    border-top: 1px solid var(--rule);
-    align-items: baseline;
-  }
-  .agenda-item:last-child { border-bottom: 1px solid var(--rule); }
-  .agenda-item .num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 44px;
-    color: var(--accent);
-  }
-  .agenda-item .label {
-    font-family: var(--serif);
-    font-size: 38px;
-    line-height: 1.2;
-    color: var(--ink);
-    font-weight: 400;
-  }
-  .agenda-item .sub {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--muted);
-    margin-top: 8px;
-    line-height: 1.4;
-  }
-
-  /* Bravo company stats */
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    margin-top: 64px;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-  }
-  .stat-cell {
-    padding: 48px 36px 48px 0;
-    border-right: 1px solid var(--rule);
-  }
-  .stat-cell:last-child { border-right: none; padding-right: 0; }
-  .stat-cell .stat-num {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: 88px;
-    line-height: 1;
-    color: var(--ink);
-    letter-spacing: -0.02em;
-  }
-  .stat-cell .stat-num .unit {
-    font-size: 36px;
-    color: var(--muted);
-    font-style: italic;
-    margin-left: 6px;
-  }
-  .stat-cell .stat-label {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 18px;
-    font-weight: 500;
-  }
-  .stat-cell .stat-detail {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 24px;
-    color: var(--ink-soft);
-    margin-top: 14px;
-    line-height: 1.3;
-  }
-
-  /* Three failures */
-  .three-col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-top: 56px;
-    flex: 1;
-    align-content: start;
-  }
-  .failure-card {
-    border-top: 3px solid var(--accent);
-    padding-top: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .failure-card .fail-num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 28px;
-    color: var(--accent);
-  }
-  .failure-card .fail-name {
-    font-family: var(--serif);
-    font-size: 38px;
-    line-height: 1.15;
-    color: var(--ink);
-    font-weight: 500;
-    margin: 0;
-  }
-  .failure-card .fail-body {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-  .failure-card .fail-quote {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 24px;
-    color: var(--muted);
-    line-height: 1.4;
-    margin-top: auto;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
-  }
-
-  /* RQ slide */
-  .rq-main {
-    background: var(--paper);
-    border-left: 4px solid var(--accent);
-    padding: 36px 44px;
-    margin-top: 24px;
-    max-width: 1500px;
-  }
-  .rq-main .rq-eyebrow {
-    font-family: var(--sans);
-    font-size: 24px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 14px;
-  }
-  .rq-main .rq-q {
-    font-family: var(--serif);
-    font-size: 36px;
-    line-height: 1.3;
-    color: var(--ink);
-    font-style: italic;
-    font-weight: 400;
-  }
-  .rq-subs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 80px;
-    margin-top: 52px;
-  }
-  .rq-sub {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    align-items: baseline;
-  }
-  .rq-sub .n {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    font-weight: 500;
-  }
-  .rq-sub .t {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.45;
-    color: var(--ink-soft);
-    font-weight: 400;
-  }
-
-  /* Literature 3-col */
-  .lit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56px;
-    margin-top: 56px;
-    flex: 1;
-    align-content: start;
-  }
-  .lit-card .lit-name {
-    font-family: var(--serif);
-    font-size: 32px;
-    line-height: 1.2;
-    color: var(--ink);
-    font-weight: 500;
-    margin: 0 0 8px;
-  }
-  .lit-card .lit-cite {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-  .lit-card .lit-body {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-  .lit-card .lit-divider {
-    width: 48px;
-    height: 1px;
-    background: var(--accent);
-    margin: 0 0 24px;
-  }
-
-  /* Methodology cycle */
-  .phase-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
-    margin-top: 64px;
-  }
-  .phase-cell {
-    background: var(--paper);
-    padding: 36px 28px;
-    border-top: 3px solid var(--ink);
-    display: flex; flex-direction: column; gap: 16px;
-    min-height: 360px;
-  }
-  .phase-cell.highlight { border-top-color: var(--accent); }
-  .phase-cell .phase-num {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.15em;
-    font-weight: 500;
-  }
-  .phase-cell .phase-name {
-    font-family: var(--serif);
-    font-size: 28px;
-    line-height: 1.15;
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .phase-cell .phase-body {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-    margin-top: auto;
-  }
-
-  /* Gap analysis table */
-  table.gap-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 56px;
-    font-family: var(--sans);
-  }
-  table.gap-table th {
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-    padding: 16px 24px 16px 0;
-    border-bottom: 2px solid var(--ink);
-  }
-  table.gap-table th:last-child { padding-right: 0; }
-  table.gap-table td {
-    padding: 24px 24px 24px 0;
-    border-bottom: 1px solid var(--rule);
-    vertical-align: top;
-    font-size: 24px;
-    line-height: 1.4;
-    color: var(--ink-soft);
-  }
-  table.gap-table td.dim { color: var(--ink); font-weight: 500; }
-  table.gap-table td.arrow { width: 60px; color: var(--accent); font-family: var(--serif); font-style: italic; font-size: 28px; padding-right: 8px; }
-  table.gap-table td:last-child { padding-right: 0; }
-
-  /* Hypothesis table */
-  table.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-    font-family: var(--sans);
-  }
-  table.data-table th {
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-    padding: 14px 20px 14px 0;
-    border-bottom: 2px solid var(--ink);
-  }
-  table.data-table th.num, table.data-table td.num { text-align: right; font-family: var(--mono); }
-  table.data-table td {
-    padding: 16px 20px 16px 0;
-    border-bottom: 1px solid var(--rule);
-    vertical-align: middle;
-    font-size: 24px;
-    line-height: 1.35;
-    color: var(--ink-soft);
-  }
-  table.data-table td.code {
-    font-family: var(--mono);
-    color: var(--accent);
-    font-weight: 500;
-    width: 80px;
-  }
-  table.data-table td.hyp { color: var(--ink); font-weight: 500; max-width: 600px; }
-  table.data-table td.verdict {
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--ink);
-  }
-  table.data-table td.verdict.reject { color: var(--accent); }
-  table.data-table td.verdict.confirm { color: var(--ochre); }
-
-  /* Descriptive stats slide */
-  .desc-layout {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 80px;
-    margin-top: 56px;
-    flex: 1;
-  }
-  .desc-stats-list {
-    display: flex; flex-direction: column;
-    border-top: 1px solid var(--rule);
-  }
-  .desc-stats-list .row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 32px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--rule);
-    align-items: baseline;
-  }
-  .desc-stats-list .label {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink-soft);
-  }
-  .desc-stats-list .mean {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .desc-stats-list .sd {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--muted);
-  }
-  .desc-stats-list .row.highlight {
-    background: var(--paper);
-    margin: 0 -16px;
-    padding-left: 16px; padding-right: 16px;
-  }
-  .desc-stats-list .row.highlight .label { color: var(--accent); font-weight: 600; }
-  .desc-stats-list .row.highlight .mean,
-  .desc-stats-list .row.highlight .sd { color: var(--accent); font-weight: 600; }
-
-  .comfort-callout {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 48px;
-    align-self: center;
-  }
-  .comfort-callout .big-num {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: 180px;
-    line-height: 0.9;
-    color: var(--paper);
-    letter-spacing: -0.04em;
-  }
-  .comfort-callout .big-num em {
-    font-style: italic;
-    color: var(--accent-soft);
-    font-weight: 400;
-  }
-  .comfort-callout .lbl {
-    font-family: var(--sans);
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(250,248,242,0.55);
-    margin-top: 28px;
-    font-weight: 600;
-  }
-  .comfort-callout .desc {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 26px;
-    color: rgba(250,248,242,0.85);
-    line-height: 1.35;
-    margin-top: 20px;
-  }
-
-  /* Bar chart for format analysis */
-  .bar-chart {
-    margin-top: 48px;
-    display: flex; flex-direction: column;
-    gap: 16px;
-    flex: 1;
-  }
-  .bar-row {
-    display: grid;
-    grid-template-columns: 140px 1fr 220px;
-    gap: 24px;
-    align-items: center;
-  }
-  .bar-row .bar-label {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .bar-row .bar-track {
-    height: 44px;
-    background: transparent;
-    position: relative;
-  }
-  .bar-row .bar-fill {
-    height: 100%;
-    background: var(--accent);
-    display: flex; align-items: center; justify-content: flex-end;
-    padding-right: 14px;
-    color: var(--paper);
-    font-family: var(--mono);
-    font-size: 24px;
-    font-weight: 500;
-  }
-  .bar-row .bar-fill.alt { background: var(--ink); }
-  .bar-row .bar-fill.faint { background: var(--rule); color: var(--ink-soft); }
-  .bar-row .bar-meta {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--muted);
-  }
-  .bar-row .bar-meta strong { color: var(--ink); font-weight: 600; font-family: var(--mono); }
-
-  /* Likert results */
-  .likert-grid {
-    margin-top: 48px;
-    display: flex; flex-direction: column;
-    gap: 22px;
-    flex: 1;
-  }
-  .likert-row {
-    display: grid;
-    grid-template-columns: 60px 1fr 120px 320px;
-    gap: 32px;
-    align-items: center;
-    padding-bottom: 22px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .likert-row .code {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    font-weight: 500;
-  }
-  .likert-row .stmt {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink);
-    line-height: 1.35;
-  }
-  .likert-row .num {
-    font-family: var(--mono);
-    font-size: 30px;
-    color: var(--ink);
-    font-weight: 500;
-    text-align: right;
-  }
-  .likert-row .num.low { color: var(--accent); }
-  .likert-row .num.high { color: var(--ochre); }
-  .likert-row .scale {
-    height: 28px;
-    background: var(--rule-soft);
-    position: relative;
-  }
-  .likert-row .scale .scale-mark {
-    position: absolute;
-    top: -4px; bottom: -4px;
-    width: 2px;
-    background: var(--ink);
-  }
-  .likert-row .scale .scale-mark.mid {
-    background: var(--muted);
-    opacity: 0.5;
-  }
-  .likert-row .scale .scale-fill {
-    position: absolute;
-    top: 0; bottom: 0; left: 0;
-    background: var(--accent);
-  }
-  .likert-row .scale .scale-fill.high { background: var(--ochre); }
-
-  /* KPI Priority Ranking */
-  .kpi-rank {
-    margin-top: 48px;
-    display: flex; flex-direction: column;
-    flex: 1;
-  }
-  .kpi-row {
-    display: grid;
-    grid-template-columns: 80px 1fr 100px 1fr;
-    gap: 32px;
-    padding: 14px 0;
-    border-top: 1px solid var(--rule);
-    align-items: center;
-  }
-  .kpi-row:last-child { border-bottom: 1px solid var(--rule); }
-  .kpi-row.last { background: var(--paper); margin: 0 -20px; padding-left: 20px; padding-right: 20px; border-color: var(--accent); border-top-width: 2px; border-bottom: 2px solid var(--accent); }
-  .kpi-row .rank {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 36px;
-    color: var(--ink);
-  }
-  .kpi-row.last .rank { color: var(--accent); }
-  .kpi-row .name {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .kpi-row .vote {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--ink);
-    text-align: right;
-  }
-  .kpi-row .bar {
-    height: 18px;
-    background: var(--rule-soft);
-    position: relative;
-  }
-  .kpi-row .bar-fill {
-    height: 100%;
-    background: var(--ink);
-  }
-  .kpi-row.last .bar-fill { background: var(--accent); }
-
-  /* Themes */
-  .themes-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 36px 64px;
-    margin-top: 48px;
-    flex: 1;
-    align-content: start;
-  }
-  .theme-card {
-    padding: 32px 0 0;
-    border-top: 2px solid var(--ink);
-  }
-  .theme-card .theme-tag {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.15em;
-    font-weight: 500;
-    margin-bottom: 12px;
-  }
-  .theme-card .theme-name {
-    font-family: var(--serif);
-    font-size: 32px;
-    line-height: 1.15;
-    color: var(--ink);
-    font-weight: 500;
-    margin: 0 0 18px;
-  }
-  .theme-card .theme-quote {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 24px;
-    line-height: 1.45;
-    color: var(--muted);
-    border-left: 2px solid var(--accent);
-    padding-left: 20px;
-    margin: 0 0 18px;
-  }
-  .theme-card .theme-body {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-
-  /* Triangulation */
-  .tri-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 48px;
-  }
-  .tri-table th, .tri-table td {
-    text-align: left;
-    padding: 22px 24px 22px 0;
-    vertical-align: top;
-    font-family: var(--sans);
-  }
-  .tri-table th {
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-    border-bottom: 2px solid var(--ink);
-  }
-  .tri-table td {
-    font-size: 24px;
-    line-height: 1.4;
-    color: var(--ink-soft);
-    border-bottom: 1px solid var(--rule);
-  }
-  .tri-table td.gap-name {
-    font-family: var(--serif);
-    font-size: 26px;
-    color: var(--ink);
-    font-weight: 500;
-    font-style: italic;
-    width: 240px;
-  }
-  .tri-table td.verdict {
-    font-family: var(--mono);
-    color: var(--accent);
-    font-size: 24px;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-    width: 160px;
-  }
-
-  /* MPI Design slide */
-  .mpi-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-top: 48px;
-    flex: 1;
-    border-top: 2px solid var(--ink);
-  }
-  .mpi-half {
-    padding: 40px 48px 40px 0;
-  }
-  .mpi-half + .mpi-half {
-    border-left: 1px solid var(--rule);
-    padding-left: 48px;
-    padding-right: 0;
-  }
-  .mpi-half .mpi-tag {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.15em;
-    font-weight: 500;
-  }
-  .mpi-half .mpi-weight {
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: 72px;
-    line-height: 1;
-    color: var(--ink);
-    margin: 18px 0 6px;
-  }
-  .mpi-half .mpi-weight em {
-    font-style: italic;
-    color: var(--accent);
-    font-weight: 400;
-  }
-  .mpi-half .mpi-name {
-    font-family: var(--serif);
-    font-size: 36px;
-    line-height: 1.15;
-    color: var(--ink);
-    font-weight: 500;
-    margin: 0 0 36px;
-  }
-  .mpi-kpi-list { display: flex; flex-direction: column; }
-  .mpi-kpi {
-    display: grid;
-    grid-template-columns: 1fr 80px;
-    gap: 16px;
-    padding: 18px 0;
-    border-top: 1px solid var(--rule);
-    align-items: baseline;
-  }
-  .mpi-kpi .kn {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink);
-    line-height: 1.3;
-  }
-  .mpi-kpi .kw {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    text-align: right;
-    font-weight: 500;
-  }
-
-  /* Scoring logic */
-  .scoring-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 56px;
-    margin-top: 56px;
-    flex: 1;
-    align-content: start;
-  }
-  .scoring-card {
-    padding: 40px 0 0;
-    border-top: 3px solid var(--accent);
-  }
-  .scoring-card .num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 32px;
-    color: var(--accent);
-    margin-bottom: 18px;
-  }
-  .scoring-card .name {
-    font-family: var(--serif);
-    font-size: 38px;
-    color: var(--ink);
-    line-height: 1.15;
-    font-weight: 500;
-    margin: 0 0 18px;
-  }
-  .scoring-card .body {
-    font-family: var(--sans);
-    font-size: 24px;
-    line-height: 1.5;
-    color: var(--ink-soft);
-  }
-  .scoring-card .formula {
-    font-family: var(--mono);
-    font-size: 24px;
-    background: var(--paper);
-    padding: 16px 20px;
-    margin-top: 24px;
-    color: var(--ink);
-    border-left: 3px solid var(--ink);
-  }
-
-  /* MPI calc */
-  .calc-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-    font-family: var(--sans);
-  }
-  .calc-table th {
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-    padding: 12px 20px 12px 0;
-    border-bottom: 2px solid var(--ink);
-  }
-  .calc-table th.num, .calc-table td.num {
-    text-align: right;
-    font-family: var(--mono);
-  }
-  .calc-table td {
-    padding: 14px 20px 14px 0;
-    border-bottom: 1px solid var(--rule);
-    font-size: 24px;
-    color: var(--ink-soft);
-  }
-  .calc-table td.kpi {
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .calc-table td.num { color: var(--ink); font-weight: 500; }
-  .calc-table tr.group-row td {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 500;
-    border-bottom: 1px solid var(--rule);
-  }
-  .calc-table tr.total td {
-    background: var(--ink);
-    color: var(--paper);
-    font-weight: 600;
-    border: none;
-  }
-  .calc-table tr.total td.num {
-    color: var(--paper);
-    font-size: 32px;
-  }
-
-  /* Within-format ranking */
-  .format-ranking {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 56px;
-    flex: 1;
-    align-content: start;
-  }
-  .format-col {
-    background: var(--paper);
-    padding: 32px 28px;
-    display: flex; flex-direction: column; gap: 20px;
-  }
-  .format-col .fmt-name {
-    font-family: var(--serif);
-    font-size: 32px;
-    color: var(--ink);
-    font-weight: 500;
-    line-height: 1;
-  }
-  .format-col .fmt-n {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-  }
-  .format-col hr {
-    border: 0; height: 1px; background: var(--rule);
-    margin: 0;
-  }
-  .format-col .mgr {
-    display: grid;
-    grid-template-columns: 28px 1fr 60px;
-    align-items: baseline;
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink-soft);
-    padding: 6px 0;
-  }
-  .format-col .mgr .r { font-family: var(--mono); color: var(--muted); }
-  .format-col .mgr .s { font-family: var(--mono); color: var(--ink); text-align: right; font-weight: 500; }
-  .format-col .mgr.top { color: var(--ochre); }
-  .format-col .mgr.top .s { color: var(--ochre); font-weight: 600; }
-  .format-col .mgr.bottom { color: var(--accent); }
-  .format-col .mgr.bottom .s { color: var(--accent); font-weight: 600; }
-  .format-col .legend {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--muted);
-    margin-top: auto;
-    line-height: 1.4;
-  }
-
-  /* Reward matrix */
-  .reward-matrix {
-    display: grid;
-    grid-template-columns: 240px repeat(2, 1fr);
-    grid-template-rows: 80px 1fr 1fr;
-    margin-top: 48px;
-    flex: 1;
-    gap: 0;
-  }
-  .matrix-cell {
-    border: 1px solid var(--rule);
-    margin: -1px 0 0 -1px;
-    padding: 28px;
-    display: flex; flex-direction: column;
-    font-family: var(--sans);
-  }
-  .matrix-cell.axis-x {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: var(--mono);
-    font-size: 24px;
-    letter-spacing: 0.14em;
-    align-items: center; justify-content: center;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .matrix-cell.axis-y {
-    background: var(--ink);
-    color: var(--paper);
-    font-family: var(--mono);
-    font-size: 24px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: right;
-    justify-content: center;
-  }
-  .matrix-cell.corner { background: transparent; border: none; }
-  .matrix-cell.q .q-tag {
-    font-family: var(--mono);
-    font-size: 24px;
-    letter-spacing: 0.16em;
-    color: var(--accent);
-    font-weight: 500;
-  }
-  .matrix-cell.q .q-name {
-    font-family: var(--serif);
-    font-size: 32px;
-    color: var(--ink);
-    font-weight: 500;
-    margin: 14px 0 12px;
-    line-height: 1.1;
-  }
-  .matrix-cell.q .q-body {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: var(--ink-soft);
-    line-height: 1.45;
-  }
-  .matrix-cell.q.star { background: var(--paper); }
-  .matrix-cell.q.star .q-name { color: var(--accent); }
-  .matrix-cell.q.expert { background: var(--paper); }
-
-  /* Implementation timeline */
-  .timeline {
-    margin-top: 56px;
-    display: flex; flex-direction: column;
-    flex: 1;
-  }
-  .timeline-header {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 14px;
-    margin-bottom: 0;
-  }
-  .timeline-header .lbl {
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--muted);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .timeline-months {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--muted);
-  }
-  .timeline-row {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--rule);
-    align-items: center;
-  }
-  .timeline-row .phase {
-    font-family: var(--serif);
-    font-size: 24px;
-    color: var(--ink);
-    font-weight: 500;
-    line-height: 1.2;
-    padding-right: 24px;
-  }
-  .timeline-row .phase .ptag {
-    display: block;
-    font-family: var(--mono);
-    font-size: 24px;
-    color: var(--accent);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    font-weight: 500;
-    font-style: normal;
-  }
-  .timeline-row .lane {
-    height: 44px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    position: relative;
-  }
-  .timeline-row .lane .bar {
-    background: var(--ink);
-    height: 28px;
-    align-self: center;
-    color: var(--paper);
-    font-family: var(--sans);
-    font-size: 24px;
-    display: flex; align-items: center;
-    padding: 0 14px;
-    font-weight: 500;
-  }
-  .timeline-row .lane .bar.accent { background: var(--accent); }
-
-  /* Conclusion */
-  .conclusion-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px 80px;
-    margin-top: 56px;
-    flex: 1;
-    align-content: start;
-  }
-  .takeaway {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    align-items: baseline;
-  }
-  .takeaway .n {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 52px;
-    color: var(--accent-soft);
-    line-height: 1;
-  }
-  .takeaway .body .h {
-    font-family: var(--serif);
-    font-size: 30px;
-    color: var(--paper);
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 0 0 12px;
-  }
-  .takeaway .body .b {
-    font-family: var(--sans);
-    font-size: 24px;
-    color: rgba(250,248,242,0.78);
-    line-height: 1.5;
-  }
-
-  /* Quote */
-  blockquote.pull {
-    margin: 36px 0 0;
-    padding: 0;
-    border: none;
-    font-family: var(--serif);
-    font-weight: 300;
-    font-style: italic;
-    font-size: 52px;
-    line-height: 1.18;
-    color: var(--ink);
-    max-width: 1500px;
-    text-wrap: balance;
-    letter-spacing: -0.01em;
-  }
-  blockquote.pull .src {
-    display: block;
-    margin-top: 32px;
-    font-family: var(--sans);
-    font-size: 24px;
-    font-style: normal;
-    color: var(--muted);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  /* slide-cover */
-  .cover-mark {
-    position: absolute;
-    top: 44px;
-    right: var(--pad-x);
-    width: 80px;
-    height: 80px;
-    background: var(--accent);
-    color: var(--paper);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 36px;
-  }
-</style>
+<script>
+(function(){
+  try {
+    var p = JSON.parse(localStorage.getItem('beyond-sales-deck-prefs')) || {};
+    var t = p.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  } catch(e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+})();
+</script>
+<link rel="stylesheet" href="deck-styles-v2.css">
 </head>
 <body>
 
@@ -1377,7 +75,8 @@
     </div>
     <div>
       <div class="label">Academic Supervisor</div>
-      <div class="value">Dr. Mukhammadfoik<br/>Badirkhanov</div>
+      <div class="value">Dr. Mukhammadfoik
+Bakhadirov</div>
     </div>
     <div>
       <div class="label">Field Context</div>
@@ -1799,7 +498,7 @@
     <div>
       <div style="display:flex; align-items: baseline; gap: 20px; padding-bottom: 18px; border-bottom: 2px solid var(--ink);">
         <span class="mono" style="color: var(--accent); font-size: 24px; letter-spacing: 0.16em; font-weight: 600;">STREAM A</span>
-        <span style="font-family: var(--serif); font-size: 32px; color: var(--ink);">Quantitative — full year, full network</span>
+        <span style="font-family: var(--sans); font-size: 32px; color: var(--ink);">Quantitative — full year, full network</span>
       </div>
       <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 16px;">
         <div style="display: grid; grid-template-columns: 220px 1fr; gap: 24px;">
@@ -1820,16 +519,16 @@
         </div>
       </div>
 
-      <div style="margin-top: 48px; padding: 28px; background: var(--paper); border-left: 3px solid var(--accent);">
+      <div style="margin-top: 48px; padding: 28px; background: var(--surface); border-left: 3px solid var(--accent);">
         <div style="font-family: var(--mono); font-size: 24px; color: var(--accent); letter-spacing: 0.16em; font-weight: 600;">KEY HYPOTHESIS — H4</div>
-        <div style="font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--ink); margin-top: 12px; line-height: 1.35;">"Mystery Shopping score has no strong association with sales performance" — confirming the location-bias claim.</div>
+        <div style="font-family: var(--sans); font-style: italic; font-size: 24px; color: var(--ink); margin-top: 12px; line-height: 1.35;">"Mystery Shopping score has no strong association with sales performance" — confirming the location-bias claim.</div>
       </div>
     </div>
 
     <div>
       <div style="display:flex; align-items: baseline; gap: 20px; padding-bottom: 18px; border-bottom: 2px solid var(--ink);">
         <span class="mono" style="color: var(--accent); font-size: 24px; letter-spacing: 0.16em; font-weight: 600;">STREAM B</span>
-        <span style="font-family: var(--serif); font-size: 32px; color: var(--ink);">Qualitative — manager survey</span>
+        <span style="font-family: var(--sans); font-size: 32px; color: var(--ink);">Qualitative — manager survey</span>
       </div>
       <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 16px;">
         <div style="display: grid; grid-template-columns: 220px 1fr; gap: 24px;">
@@ -1854,9 +553,9 @@
         </div>
       </div>
 
-      <div style="margin-top: 48px; padding: 28px; background: var(--paper); border-left: 3px solid var(--ink);">
+      <div style="margin-top: 48px; padding: 28px; background: var(--surface); border-left: 3px solid var(--ink);">
         <div style="font-family: var(--mono); font-size: 24px; color: var(--ink-soft); letter-spacing: 0.16em; font-weight: 600;">CONVERGENT TRIANGULATION</div>
-        <div style="font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--ink); margin-top: 12px; line-height: 1.35;">Each gap must be confirmed by both streams to count as confirmed.</div>
+        <div style="font-family: var(--sans); font-style: italic; font-size: 24px; color: var(--ink); margin-top: 12px; line-height: 1.35;">Each gap must be confirmed by both streams to count as confirmed.</div>
       </div>
     </div>
   </div>
@@ -1976,12 +675,12 @@
         <td class="num">0.884</td>
         <td class="verdict">No relationship</td>
       </tr>
-      <tr style="background: var(--paper);">
-        <td class="code" style="background: var(--paper);"><strong>H4</strong></td>
-        <td class="hyp" style="background: var(--paper); color: var(--accent); font-weight: 600;">Mystery Shopping vs. Sales — the location-bias test</td>
-        <td class="num" style="background: var(--paper); color: var(--accent); font-weight: 600;">0.150</td>
-        <td class="num" style="background: var(--paper); color: var(--accent); font-weight: 600;">0.085</td>
-        <td class="verdict reject" style="background: var(--paper);">CENTRAL FINDING</td>
+      <tr style="background: var(--surface);">
+        <td class="code" style="background: var(--surface);"><strong>H4</strong></td>
+        <td class="hyp" style="background: var(--surface); color: var(--accent); font-weight: 600;">Mystery Shopping vs. Sales — the location-bias test</td>
+        <td class="num" style="background: var(--surface); color: var(--accent); font-weight: 600;">0.150</td>
+        <td class="num" style="background: var(--surface); color: var(--accent); font-weight: 600;">0.085</td>
+        <td class="verdict reject" style="background: var(--surface);">CENTRAL FINDING</td>
       </tr>
       <tr>
         <td class="code">H5</td>
@@ -1993,7 +692,7 @@
     </tbody>
   </table>
 
-  <p class="body-text" style="margin-top: 36px; font-style: italic; font-family: var(--serif); font-size: 30px; color: var(--ink);">
+  <p class="body-text" style="margin-top: 36px; font-style: italic; font-family: var(--sans); font-size: 30px; color: var(--ink);">
     High sales do not imply high-quality management. The PMS criterion is statistically silent on the manager's actual contribution.
   </p>
 
@@ -2054,17 +753,17 @@
         <td class="num" style="color: var(--accent); font-weight: 600;">&lt; 0.001</td>
         <td>Operational discipline converts directly into customer experience</td>
       </tr>
-      <tr style="background: var(--paper);">
-        <td class="code" style="background: var(--paper);"><strong>E5</strong></td>
-        <td class="hyp" style="background: var(--paper); color: var(--accent); font-weight: 600;">OPEX vs. Wastage Rate — the discipline factor</td>
-        <td class="num" style="background: var(--paper); color: var(--accent); font-weight: 600;">0.502</td>
-        <td class="num" style="background: var(--paper); color: var(--accent); font-weight: 600;">&lt; 0.001</td>
-        <td style="background: var(--paper); color: var(--ink); font-weight: 500;">A single underlying trait drives both</td>
+      <tr style="background: var(--surface);">
+        <td class="code" style="background: var(--surface);"><strong>E5</strong></td>
+        <td class="hyp" style="background: var(--surface); color: var(--accent); font-weight: 600;">OPEX vs. Wastage Rate — the discipline factor</td>
+        <td class="num" style="background: var(--surface); color: var(--accent); font-weight: 600;">0.502</td>
+        <td class="num" style="background: var(--surface); color: var(--accent); font-weight: 600;">&lt; 0.001</td>
+        <td style="background: var(--surface); color: var(--ink); font-weight: 500;">A single underlying trait drives both</td>
       </tr>
     </tbody>
   </table>
 
-  <p class="body-text" style="margin-top: 24px; font-style: italic; font-family: var(--serif); font-size: 28px; color: var(--ink); max-width: 1500px;">
+  <p class="body-text" style="margin-top: 24px; font-style: italic; font-family: var(--sans); font-size: 28px; color: var(--ink); max-width: 1500px;">
     The same managers who control OPEX, control waste, score on the checklist, and earn higher customer scores. These signals cluster — and none of them touches sales.
   </p>
 
@@ -2194,7 +893,7 @@
       </div>
     </div>
 
-    <div class="likert-row" style="background: var(--paper); margin: 0 -20px; padding: 22px 20px; border-radius: 0;">
+    <div class="likert-row" style="background: var(--surface); margin: 0 -20px; padding: 22px 20px; border-radius: 0;">
       <span class="code">S3</span>
       <span class="stmt" style="color: var(--accent); font-weight: 600;">The system accurately differentiates high and low performing managers.</span>
       <span class="num low">2.17</span>
@@ -2242,9 +941,9 @@
       </div>
     </div>
 
-    <div class="likert-row" style="background: var(--paper); margin: 0 -20px; padding: 22px 20px; border-bottom: none;">
+    <div class="likert-row" style="background: var(--surface); margin: 0 -20px; padding: 22px 20px; border-bottom: none;">
       <span class="code">S7</span>
-      <span class="stmt" style="color: var(--ochre); font-weight: 600;">A multifactor framework would motivate me to perform better.</span>
+      <span class="stmt" style="color: var(--accent-deep); font-weight: 600;">A multifactor framework would motivate me to perform better.</span>
       <span class="num high">3.52</span>
       <div class="scale">
         <div class="scale-mark mid" style="left: 25%;"></div>
@@ -2472,7 +1171,7 @@
     </div>
   </div>
 
-  <p class="small-text" style="margin-top: 32px; max-width: 1500px; font-style: italic; font-family: var(--serif); font-size: 24px;">
+  <p class="small-text" style="margin-top: 32px; max-width: 1500px; font-style: italic; font-family: var(--sans); font-size: 24px;">
     Weights derive from the S8 manager rankings and the literature — not from an imported framework. Every KPI in the index either failed to correlate with sales (proving its independence) or was nominated by the managers as fundamental.
   </p>
 
@@ -2549,14 +1248,14 @@
       <tr><td class="kpi">Combined Loss Rate</td><td class="num">2.1%</td><td class="num">1.7%</td><td class="num">0.882</td><td class="num">0.265</td></tr>
       <tr><td class="kpi">OPEX Rate</td><td class="num">4.5%</td><td class="num">4.0%</td><td class="num">0.688</td><td class="num">0.138</td></tr>
       <tr><td class="kpi">Turnover Rate</td><td class="num">8 / 10</td><td class="num">≤ 10</td><td class="num">1.000</td><td class="num">0.200</td></tr>
-      <tr><td colspan="4" style="color: var(--ink); font-family: var(--serif); font-style: italic; padding-left: 24px;">Group 1 subtotal × 0.50</td><td class="num" style="color: var(--ink); font-weight: 600;">0.446</td></tr>
+      <tr><td colspan="4" style="color: var(--ink); font-family: var(--sans); font-style: italic; padding-left: 24px;">Group 1 subtotal × 0.50</td><td class="num" style="color: var(--ink); font-weight: 600;">0.446</td></tr>
 
       <tr class="group-row"><td colspan="5">Group 2 · Execution Excellence</td></tr>
       <tr><td class="kpi">Mystery Shopping</td><td class="num">83.5%</td><td class="num">—</td><td class="num">0.835</td><td class="num">0.167</td></tr>
       <tr><td class="kpi">Excellence Checklist</td><td class="num">79.0%</td><td class="num">—</td><td class="num">0.790</td><td class="num">0.158</td></tr>
       <tr><td class="kpi">Behavioural Evaluation</td><td class="num">3.6 / 5</td><td class="num">—</td><td class="num">0.720</td><td class="num">0.072</td></tr>
 
-      <tr class="total"><td colspan="4" style="font-family: var(--serif); font-style: italic;">OVERALL MPI SCORE</td><td class="num">0.843</td></tr>
+      <tr class="total"><td colspan="4" style="font-family: var(--sans); font-style: italic;">OVERALL MPI SCORE</td><td class="num">0.843</td></tr>
     </tbody>
   </table>
 
@@ -2637,7 +1336,7 @@
 
   </div>
 
-  <p class="body-text" style="margin-top: 24px; max-width: 1600px; font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--ink-soft);">
+  <p class="body-text" style="margin-top: 24px; max-width: 1600px; font-family: var(--sans); font-style: italic; font-size: 24px; color: var(--ink-soft);">
     Four ranking tables — one per format — neutralise the structural advantage that the current single ranking quietly rewards. Luck of location is no longer a performance signal.
   </p>
 
@@ -2689,7 +1388,7 @@
     </div>
   </div>
 
-  <p class="small-text" style="margin-top: 36px; max-width: 1600px; font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--ink-soft);">
+  <p class="small-text" style="margin-top: 36px; max-width: 1600px; font-family: var(--sans); font-style: italic; font-size: 24px; color: var(--ink-soft);">
     MPI score acts as the primary bonus multiplier — finally pricing operational excellence into the compensation system.
   </p>
 
@@ -2721,38 +1420,39 @@
 
     <div class="timeline-row">
       <div class="phase"><span class="ptag">P1</span>Stakeholder alignment &amp; communication</div>
-      <div class="lane">
-        <div class="bar" style="grid-column: 1 / span 2;">KPI weights &amp; methodology published</div>
+      <div class="lane" style="height: 100px">
+        <div class="bar" style="grid-column: 1 / span 2; height: 6px">KPI weights &amp; methodology published</div>
       </div>
     </div>
     <div class="timeline-row">
       <div class="phase"><span class="ptag">P2</span>Live performance dashboard</div>
       <div class="lane">
-        <div class="bar" style="grid-column: 2 / span 2;">Real-time KPI visibility — addresses T1</div>
+        <div class="bar" style="grid-column: 2 / span 2; height: 70px">Real-time KPI visibility — addresses T1</div>
       </div>
     </div>
     <div class="timeline-row">
       <div class="phase"><span class="ptag">P3</span>Practical skills training</div>
       <div class="lane">
-        <div class="bar" style="grid-column: 3 / span 2;">Waste, OPEX &amp; retention workshops</div>
+        <div class="bar" style="grid-column: 3 / span 2; height: 70px">Waste, OPEX &amp; retention workshops</div>
       </div>
     </div>
     <div class="timeline-row">
       <div class="phase"><span class="ptag">P4</span>Pilot in parallel with current PMS</div>
       <div class="lane">
-        <div class="bar" style="grid-column: 4 / span 3;">First within-format rankings, no bonus impact yet</div>
+        <div class="bar" style="grid-column: 4 / span 3; height: 7px">First within-format rankings, no bonus impact yet</div>
       </div>
     </div>
     <div class="timeline-row" style="border-bottom: none;">
-      <div class="phase"><span class="ptag">P5</span>MPI linked to bonus &amp; career</div>
+      <div class="phase">P5
+bonus &amp; career</div>
       <div class="lane">
         <div class="bar accent" style="grid-column: 7 / span 1;">Go-live</div>
       </div>
     </div>
   </div>
 
-  <div class="chrome-bottom">
-    <span>Beyond Sales · Defense Deck</span>
+  <div class="chrome-bottom" style="height: 32px">
+    <span></span>
     <span>24 — Implementation Plan</span>
   </div>
 </section>
@@ -2801,7 +1501,7 @@
   </div>
 
   <div style="margin-top: auto; padding-top: 60px; border-top: 1px solid rgba(250,248,242,0.18); display: flex; justify-content: space-between; align-items: baseline;">
-    <div style="font-family: var(--serif); font-style: italic; font-size: 36px; color: var(--paper);">Thank you. I welcome your questions.</div>
+    <div style="font-family: var(--sans); font-style: italic; font-size: 36px; color: var(--surface);">Thank you. I welcome your questions.</div>
     <div style="font-family: var(--sans); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,248,242,0.55); font-weight: 600;">Nizami Tahirov · ADA University · 2026</div>
   </div>
 </section>
@@ -2810,5 +1510,6 @@
 
 <script src="deck-stage.js"></script>
 
+<script src="deck-controls-v2.js"></script>
 </body>
 </html>
